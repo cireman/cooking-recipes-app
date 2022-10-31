@@ -15,10 +15,11 @@ const Instructions = db.define('instruction', {
   step: {
     type: DataTypes.INTEGER,
     allowNull: false
-  },recipeId: {
+  },
+  recipeId: {
     type: DataTypes.UUID,
     allowNull: false,
-    field: recipe_id,
+    field: 'recipe_id',
     references: {
       key: 'id',
       model: Recipes

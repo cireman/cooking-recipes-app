@@ -14,7 +14,7 @@ const Ingredients = db.define('ingredients', {
     unique: true
   },
   typeId: {
-    type: DataType.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false,
     field: 'type_id',
     reference: {
