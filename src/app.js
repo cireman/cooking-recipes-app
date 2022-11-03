@@ -14,6 +14,7 @@ const categoryRouter = require('./categories/categories.routes')
 const recipesRouter = require('./recipes/recipes.routes')
 const ingredientsRouter = require('./ingredients/ingredients.routes')
 const instructionsRouter = require('./instructions/instructions.routes')
+const typesRouter = require('./types/types.routes')
 
 
 const initModels = require('./models/initModels')
@@ -59,7 +60,9 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/categories', categoryRouter)
 app.use('/api/v1/recipes', recipesRouter)
 app.use('/api/v1/ingredients', ingredientsRouter)
-app.use('/api/instructions', instructionsRouter)
+app.use('/api/v1/instructions', instructionsRouter)
+app.use('/api/v1/types', typesRouter)
+
 
 /*
 *app.post('/hola', async (req, res) => {
