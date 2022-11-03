@@ -1,5 +1,6 @@
 //? Dependencies
 const express = require('express')
+const cors = reqiore('cors')
 const db = require('./utils/database')
 
 
@@ -9,6 +10,9 @@ const {port} = require('./config')
 //* Routes
 const userRouter = require('./users/users.router')
 const authRouter = require('./auth/auth.router')
+const categoryRouter = require('./categories/categories.routes')
+
+
 const initModels = require('./models/initModels')
 
 
@@ -16,6 +20,11 @@ const initModels = require('./models/initModels')
 const app = express()
 
 app.use(express.json())
+// const corsConf = {
+
+// }
+app.use(cors())
+
 
 db.authenticate()
   .then(() => {
@@ -44,6 +53,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/auth', authRouter) 
+app.use('/api/v1/categories', categoryRouter)
 
 /*
 *app.post('/hola', async (req, res) => {

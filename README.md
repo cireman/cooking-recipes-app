@@ -1,4 +1,4 @@
-# BOILERPLATE
+
 
 - Express
 - PostgresSQL
@@ -10,5 +10,4 @@
 - Login route y user creation (register)
 - Tool to upload image profiles
 - CRUD for users with authentication and permission handling
-- /users/:id DELETE, PUT
-- /users/me
+
