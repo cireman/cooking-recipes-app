@@ -5,7 +5,7 @@ const getAllCategories = async() => {
   return data
 }
 
-const getCategoriesById = async(id) => {
+const getCategoryById = async(id) => {
   const data = await Categories.findOne({
     where: {
       id
@@ -32,7 +32,7 @@ const deleteCategory = async(id) => {
 
 module.exports = {
   getAllCategories,
-  getCategoriesById,
+  getCategoryById,
   createCategory,
   deleteCategory
 }

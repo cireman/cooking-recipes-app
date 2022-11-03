@@ -13,7 +13,7 @@ const getAllCategories = (req, res) => {
 
 const getCategoryById = (req, res) => {
   const id = req.params.id
-  categoriesControllers.getCategoriesById(id)
+  categoriesControllers.getCategoryById(id)
     .then(response => {
       if(response){
       res.status(200).json(response)

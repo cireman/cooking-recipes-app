@@ -2,7 +2,7 @@ const {DataTypes} = require('sequelize')
 const Recipes = require('./recipes.model')
 const db = require('../utils/database')
 
-const Instructions = db.define('instruction', {
+const Instructions = db.define('instructions', {
   id: {
     type: DataTypes.UUID,
     primaryKey: true,
