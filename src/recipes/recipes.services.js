@@ -27,7 +27,7 @@ const getRecipeById = (req, res) => {
     })
 }
 
-const createRecipe = (req, res) => {
+const postRecipe = (req, res) => {
   const userId = req.user.id
   const {title, description, urlImg, time, portions, categoryId, origin} = recipesControllers.createRecipe
 
@@ -88,7 +88,7 @@ const deleteRecipe = (req, res) => {
 module.exports = {
   getAllRecipes,
   getRecipeById,
-  createRecipe,
+  postRecipe,
   patchRecipe,
   deleteRecipe
 }

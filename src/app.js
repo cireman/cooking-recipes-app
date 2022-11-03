@@ -11,6 +11,8 @@ const {port} = require('./config')
 const userRouter = require('./users/users.router')
 const authRouter = require('./auth/auth.router')
 const categoryRouter = require('./categories/categories.routes')
+const recipesRouter = require('./recipes/recipes.routes')
+const ingredientsRouter = require('./ingredients/ingredients.routes')
 
 
 const initModels = require('./models/initModels')
@@ -54,6 +56,8 @@ app.get('/', (req, res) => {
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/auth', authRouter) 
 app.use('/api/v1/categories', categoryRouter)
+app.use('/api/v1/recipes', recipesRouter)
+app.use('/api/vi/ingredients', ingredientsRouter)
 
 /*
 *app.post('/hola', async (req, res) => {

@@ -11,7 +11,7 @@ router.route('/')
   .get(recipesServices.getAllRecipes)
   .post(
     passport.authenticate('jwt', {session: false}),
-    recipesServices.createRecipe
+    recipesServices.postRecipe
   )
 
 router.route('/:recipe_id')
