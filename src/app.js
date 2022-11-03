@@ -1,6 +1,6 @@
 //? Dependencies
 const express = require('express')
-const cors = reqiore('cors')
+const cors = require('cors')
 const db = require('./utils/database')
 
 
@@ -13,6 +13,7 @@ const authRouter = require('./auth/auth.router')
 const categoryRouter = require('./categories/categories.routes')
 const recipesRouter = require('./recipes/recipes.routes')
 const ingredientsRouter = require('./ingredients/ingredients.routes')
+const instructionsRouter = require('./instructions/instructions.routes')
 
 
 const initModels = require('./models/initModels')
@@ -57,7 +58,8 @@ app.use('/api/v1/users', userRouter)
 app.use('/api/v1/auth', authRouter) 
 app.use('/api/v1/categories', categoryRouter)
 app.use('/api/v1/recipes', recipesRouter)
-app.use('/api/vi/ingredients', ingredientsRouter)
+app.use('/api/v1/ingredients', ingredientsRouter)
+app.use('/api/instructions', instructionsRouter)
 
 /*
 *app.post('/hola', async (req, res) => {
