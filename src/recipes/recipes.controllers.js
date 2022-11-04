@@ -1,4 +1,4 @@
-const Recipes = require('../models/recipes.model')
+const Recipes = require('../models/recipes.models')
 const uuid = require('uuid')
 
 

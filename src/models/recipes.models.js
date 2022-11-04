@@ -25,7 +25,7 @@ id: {
   urlImg: {
     type: DataTypes.STRING,
     validation: {
-      isUrl: true
+      // isUrl: true
     },
     field: 'url_img'
   },

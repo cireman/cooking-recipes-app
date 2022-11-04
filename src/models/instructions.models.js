@@ -1,5 +1,5 @@
 const {DataTypes} = require('sequelize')
-const Recipes = require('./recipes.model')
+const Recipes = require('./recipes.models')
 const db = require('../utils/database')
 
 const Instructions = db.define('instructions', {
